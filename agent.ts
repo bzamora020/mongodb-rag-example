@@ -1,5 +1,6 @@
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { ChatAnthropic } from "@langchain/anthropic";
+// import { ChatAnthropic } from "@langchain/anthropic";
+import { ChatOpenAI } from "@langchain/openai";
 import { AIMessage, BaseMessage, HumanMessage } from "@langchain/core/messages";
 import {
   ChatPromptTemplate,
@@ -68,8 +69,8 @@ export async function callAgent(client: MongoClient, query: string, thread_id: s
   // We can extract the state typing via `GraphState.State`
   const toolNode = new ToolNode<typeof GraphState.State>(tools);
 
-  const model = new ChatAnthropic({
-    model: "claude-3-5-sonnet-20240620",
+  const model = new ChatOpenAI({
+    model: "gpt-4o-mini",
     temperature: 0,
   }).bindTools(tools);
 
