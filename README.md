@@ -8,7 +8,7 @@ This repository demonstrates how to use LangGraph with MongoDB for building and 
 - Utilizes LangGraph for managing agentic conversational flows in TypeScript
 - Integrates with MongoDB Atlas for storing and retrieving conversation data
 - Implements a RESTful API using Express.js for chat interactions
-- Uses OpenAI's GPT model and Anthropic's API for generating responses
+- Uses OpenAI's GPT model for generating responses
 - Includes a tool for employee lookup using MongoDB Atlas vector search
 
 ## Prerequisites
@@ -16,7 +16,6 @@ This repository demonstrates how to use LangGraph with MongoDB for building and 
 - [Node.js and npm](https://nodejs.org/)
 - [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas)
 - [OpenAI API key](https://platform.openai.com/account/api-keys)
-- [Anthropic API key](https://www.anthropic.com/claude)
 
 ## Installation
 
@@ -39,7 +38,6 @@ npm install
   
   ```
   OPENAI_API_KEY=your_openai_api_key_here
-  ANTHROPIC_API_KEY=your_anthropic_api_key_here
   MONGODB_ATLAS_URI=your_mongodb_atlas_uri_here
   ```
 
